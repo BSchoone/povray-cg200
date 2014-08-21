@@ -9,7 +9,7 @@
 
 global_settings { max_trace_level 256 }
 
-camera {  right x*16/9 location <1, 5, -25> look_at <1,0,0> }
+camera {  right x*16/9 location <1, 5, -15> look_at <1,0,0> }
 //camera {  right x*16/9 location <1, 3, -5> look_at <1,0,0> }
 
 light_source { <30, 200, -150>, 1 }
@@ -33,11 +33,11 @@ sky_sphere{
 } 
 
 //object{Hat}
-object{Island}  
-Rainbow()
+//object{Island}  
+//Rainbow()
 //PotOfGold()
-BGRainbow() 
-Jetty(30 , 50, 0.25)
+//BGRainbow() 
+Jetty(0 , 50, 0.25)
 
 
 plane{ y, 0.01 texture{t_water}}
