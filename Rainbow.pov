@@ -9,30 +9,46 @@
 #declare r_red1    = color rgbf<1.0, 0.2, 0.2, 0.8>;
 #declare r_red2    = color rgbf<1.0, 0.2, 0.2, 1.0>;
 
+#declare trans = 0.99;
+
 #macro Rainbow ()
-	#declare i = 0;
-	#while(i < 7)
+	#declare i = 1;
+	#while(i < 8)
 		    torus{
-		    15-(i*1),0.5
+		    80-(i*1),0.5
 		    pigment {
 		            #switch (i)
 	  				#case (1)
-	  				color r_blue
-	  				filter 0.6
+	  				color r_violet1
+	  				filter trans
 	  				#break 
 	  				#case (2)
-					color r_green
-					filter 0.6
+					color r_indigo
+					filter trans
 	  				#break 
 	 				#case (3)
-	  				color r_red1
-	  				filter 0.6
+	  				color r_blue
+	  				filter trans
 	  				#break
-	 				#else
-					color r_indigo
-					filter 0.6
+	  				#case (4)
+	  				color r_green
+	  				filter trans
+	  				#break
+	 				#case (5)
+	  				color r_yellow
+	  				filter trans
+	  				#break
+	  				#case (6)
+	  				color r_orange
+	  				filter trans
+	  				#break
+	  				#case (7)
+	  				color r_red1
+	  				filter trans
+	  				#break
 	 				#end
 		    }
+		    translate<60,0,0>
 		    rotate <90,0,0>
 	}
 		/*

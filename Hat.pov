@@ -29,4 +29,6 @@
 		translate <0.0,0.3,0.0>
 		pigment { Green }
 	}
+	scale< 0.25, 0.25, 0.25>
+	translate<-0.75,1,-10.5>
 }
