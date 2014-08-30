@@ -1,3 +1,5 @@
+#include "colors.inc"
+
 #macro Jetty(startFrom, endWhen, scaleFactor)
 	#declare plankCount = 0;
 	#declare jj = startFrom;

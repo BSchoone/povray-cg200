@@ -1,3 +1,5 @@
+#include "colors.inc"
+
 #declare Hat = union {
 	// BottomOfHat
 	cone {
@@ -30,5 +32,5 @@
 		pigment { Green }
 	}
 	scale< 0.25, 0.25, 0.25>
-	translate<-0.75,1,-10.5>
+	translate<-1.25,1,-10.5>
 }

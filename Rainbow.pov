@@ -1,3 +1,5 @@
+#include "colors.inc"
+
 #declare r_violet1 = color rgbf<1.0, 0.5, 1.0, 1.0>;
 #declare r_violet2 = color rgbf<1.0, 0.5, 1.0, 0.8>;
 #declare r_indigo  = color rgbf<0.5, 0.5, 1.0, 0.8>;
