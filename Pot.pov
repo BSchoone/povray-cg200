@@ -16,14 +16,14 @@
 				0, 0.2
 				pigment{color Brown}
 				scale<1.5,0,0>
-				translate<1,0.1,0>
+				translate<1,0.1,1.0>
 			}
 	
 			sphere{
 				0, 0.2
 				pigment{color Brown}
 				translate<0.25,-0.3,0>
-				scale<2,0,0>
+				scale<2,1.0,1.0>
 			}
 		translate<0,-0.7,0>
 		rotate<0,ii,0>
@@ -50,7 +50,7 @@ sphere{
 		}
 	}
   //translate<1,1.75,1>
-  scale<0,0.5,0>
+  scale<1.0,0.5,1.0>
 }
 
 
@@ -77,5 +77,5 @@ union{
 		}
 	}
 	scale< 0.25, 0.25, 0.25>
-	translate<-0.75,1,-10.5>
+	translate<-0.30,1,-10.5>
 }

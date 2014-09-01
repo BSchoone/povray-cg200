@@ -14,15 +14,41 @@ global_settings { max_trace_level 256 }
 //camera {  right x*16/9 location <5, 5, -25> look_at <0,0,0> }
 //camera {  right x*16/9 location <3, 1, 5> look_at <0,0,0> }
 
-// the rotating camera: ----------
-camera {
-  //angle    35
-  location <5, 5, -25>
+//the rotating camera: ----------
+/*camera {
+  location <0, 5, 25>
   right    x*16/9
   look_at  <0,0,0>
-  rotate   <0,-360*(clock+0.10),0>
+
+  	#if(clock <= 0.5)
+  	rotate <0,-360*(clock),0>
+  	
+  	#else
+		#if(clock<=1.0)
+			translate <0, -(7*(clock-0.5)) , (-(25*(clock-0.5))) >
+	  		rotate <0,-360*(0.5),0>
+	  		#else
+	  		translate <0, -(7*(1-0.5)) , (-(25*(1-0.5))) >
+	  		rotate <0,-360*(0.5),0>
+	  	#end
+  	#end
 }
-//---------------------- end of camera 
+*/
+//the rotating camera: ----------
+camera {
+  location <0, 5, 25>
+  right    x*16/9
+  look_at  <0,0,0>
+
+  	#if(clock <= 1)
+  	translate <0, -(7*(clock/2)) , (-(25*(clock/2))) >
+  	rotate <0,-360*(clock/2),0>
+  	
+  	#else
+			translate <0, -(7*(0.5)) , (-(25*(0.5))) >
+	  		rotate <0,-360*(0.5),0>
+  	#end
+}
 
 light_source { <30, 200, -150>, 1 }
 light_source { <5, 5, 5>, 1 }
@@ -54,9 +80,9 @@ sky_sphere{
 
 object{Hat}
 object{Island}  
-//Rainbow()
+Rainbow()
 object{PotOfGold}
-//BGRainbow() 
+BGRainbow() 
 Jetty(0 , 43, 0.3)
 //plane{ y, 0.01 texture{t_water}}
 HyperWater()

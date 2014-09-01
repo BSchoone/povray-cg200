@@ -31,6 +31,16 @@
 		translate <0.0,0.3,0.0>
 		pigment { Green }
 	}
+	
+	rotate<0,0, (30*sin(clock*900))>
+	
 	scale< 0.25, 0.25, 0.25>
-	translate<-1.25,1,-10.5>
+	translate<-0.8,1,-10.5>
+	
+
+	/*#if()
+
+	#else
+
+	#end*/
 }
