@@ -1,4 +1,5 @@
 #include "colors.inc"
+#include "metals.inc"
 
 #declare PotOfGold = union{
 	
@@ -9,19 +10,19 @@
 			box{
 				<0,0.1,0.1>, <1,-0.3,-0.1>
 		
-				pigment{color Brown}
+				pigment{color P_Brass1}
 			}
 	
 			sphere{
 				0, 0.2
-				pigment{color Brown}
-				scale<1.5,0,0>
+				pigment{color P_Brass1}
+				scale<1.5,1,1>
 				translate<1,0.1,1.0>
 			}
 	
 			sphere{
 				0, 0.2
-				pigment{color Brown}
+				pigment{color P_Brass1}
 				translate<0.25,-0.3,0>
 				scale<2,1.0,1.0>
 			}
@@ -38,7 +39,7 @@ sphere{
 	hollow
 	interior{ 
 		media{ 
-			emission 1
+			emission <10,10,10>
        		density{ 
        			spherical density_map{ 
        				[0 rgb 0]
@@ -69,7 +70,7 @@ union{
 				<0,0,0> 0.95
 				//translate<1,1,1>
 			}
-			pigment{color Brown}
+			pigment{color P_Brass1}
 		}
 		torus{
 			0.937, 0.08

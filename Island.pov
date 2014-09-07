@@ -15,26 +15,6 @@ global_settings { max_trace_level 256 }
 //camera {  right x*16/9 location <3, 1, 5> look_at <0,0,0> }
 
 //the rotating camera: ----------
-/*camera {
-  location <0, 5, 25>
-  right    x*16/9
-  look_at  <0,0,0>
-
-  	#if(clock <= 0.5)
-  	rotate <0,-360*(clock),0>
-  	
-  	#else
-		#if(clock<=1.0)
-			translate <0, -(7*(clock-0.5)) , (-(25*(clock-0.5))) >
-	  		rotate <0,-360*(0.5),0>
-	  		#else
-	  		translate <0, -(7*(1-0.5)) , (-(25*(1-0.5))) >
-	  		rotate <0,-360*(0.5),0>
-	  	#end
-  	#end
-}
-*/
-//the rotating camera: ----------
 camera {
   location <0, 5, 25>
   right    x*16/9
@@ -50,8 +30,21 @@ camera {
   	#end
 }
 
-light_source { <30, 200, -150>, 1 }
-light_source { <5, 5, 5>, 1 }
+ light_source {
+    <-0.30,4,-15>
+    color Green
+    spotlight
+    radius 1
+    falloff 20
+    tightness 5
+    point_at <-0.30,1,-10.5>
+  }
+
+light_source{ 
+	<30, 200, 150>, 0.5
+}
+
+
 
 sky_sphere{
 	pigment{
@@ -86,19 +79,3 @@ BGRainbow()
 Jetty(0 , 43, 0.3)
 //plane{ y, 0.01 texture{t_water}}
 HyperWater()
- 
-
-cylinder{
-	<0,0,0>, <100,0,0>, 0.1
-	pigment{ color Green}
-}
-
-cylinder{
-	<0,0,0>, <0,100,0>, 0.1
-	pigment{ color Red}
-}
-
-cylinder{
-	<0,0,0>, <0,0,100>, 0.1
-	pigment{ color Blue}
-}

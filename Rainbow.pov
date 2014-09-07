@@ -1,15 +1,15 @@
 #include "colors.inc"
 
-#declare r_violet1 = color rgbf<1.0, 0.5, 1.0, 1.0>;
-#declare r_violet2 = color rgbf<1.0, 0.5, 1.0, 0.8>;
-#declare r_indigo  = color rgbf<0.5, 0.5, 1.0, 0.8>;
-#declare r_blue    = color rgbf<0.2, 0.2, 1.0, 0.8>;
-#declare r_cyan    = color rgbf<0.2, 1.0, 1.0, 0.8>;
-#declare r_green   = color rgbf<0.2, 1.0, 0.2, 0.8>;
-#declare r_yellow  = color rgbf<1.0, 1.0, 0.2, 0.8>;
-#declare r_orange  = color rgbf<1.0, 0.5, 0.2, 0.8>;
-#declare r_red1    = color rgbf<1.0, 0.2, 0.2, 0.8>;
-#declare r_red2    = color rgbf<1.0, 0.2, 0.2, 1.0>;
+#declare r_violet1 = color rgbf<1.0, 0.5, 1.0, 0.5>;
+#declare r_violet2 = color rgbf<1.0, 0.5, 1.0, 0.4>;
+#declare r_indigo  = color rgbf<0.5, 0.5, 1.0, 0.4>;
+#declare r_blue    = color rgbf<0.2, 0.2, 1.0, 0.4>;
+#declare r_cyan    = color rgbf<0.2, 1.0, 1.0, 0.4>;
+#declare r_green   = color rgbf<0.2, 1.0, 0.2, 0.4>;
+#declare r_yellow  = color rgbf<1.0, 1.0, 0.2, 0.4>;
+#declare r_orange  = color rgbf<1.0, 0.5, 0.2, 0.4>;
+#declare r_red1    = color rgbf<1.0, 0.2, 0.2, 0.4>;
+#declare r_red2    = color rgbf<1.0, 0.2, 0.2, 0.5>;
 
 #declare trans = 0.99;
 
@@ -53,20 +53,11 @@
 		    translate<60,0,0>
 		    rotate <90,0,0>
 	}
-		/*
-		     #if(mod(i,3) = 0)
-		    light_source{ <-(30-(i*2)), 5, 0>
-		                                    color rgb <1,1,1>
-		                                    spotlight point_at <0, (30-(i*2)), 0>
-		                            }
-		    light_source{ <(30-(i*2)), 5, 0>
-		                                    color rgb <1,1,1>
-		                                    spotlight point_at <0, (30-(i*2)), 0>
-		                            }
-		    #end*/
 	#declare i = i+1;
 	#end
 #end
+
+
 
 #macro BGRainbow()
 rainbow {

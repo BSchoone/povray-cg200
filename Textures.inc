@@ -1,6 +1,6 @@
 #include "colors.inc"
 
-#declare t_water = texture
+/*#declare t_water = texture
 {
   pigment{ rgb <.2,.2,.2> }
   
@@ -18,7 +18,7 @@
     phong_size 120
     reflection 0.6
   }
-}
+}*/
 
 #declare t_mountain = texture
 {
@@ -33,7 +33,7 @@
   }
 }
 
-#declare t_trans_layer = texture
+/*#declare t_trans_layer = texture
 {
   pigment{ rgb <.2,.2,.2> }
   
@@ -50,7 +50,7 @@
     phong 0.8
     phong_size 120
   }
-}
+}*/
 
 #macro HyperWater()
 //Ground Underneath
@@ -86,6 +86,7 @@ plane{
 		}
 	}
 	interior{I_Glass}
+	translate<0,0,-(clock/2)>
 }
 #end
 
